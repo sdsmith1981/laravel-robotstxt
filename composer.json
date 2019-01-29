@@ -1,11 +1,15 @@
 {
-    "name": "verschuur/laravel-robotstxt",
+    "name": "sdsmith1981/laravel-robotstxt",
     "description": "Set the robots.txt content dynamically based on the Laravel app environment.",
     "keywords": ["php", "laravel", "robots.txt"],
     "authors": [
         {
             "name": "Govert Verschuur",
             "email": "govert.verschuur@gmail.com"
+        },
+        {
+            "name": "Steve Smith",
+            "email": "steven@sd-smith.co.uk"
         }
     ],
     "require": {
