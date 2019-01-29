@@ -1,7 +1,7 @@
 <?php
 
-use Gverschuur\RobotsTxt\Controllers\RobotsTxtController;
-use Gverschuur\RobotsTxt\RobotsTxtProvider;
+use Sdsmith1981\RobotsTxt\Controllers\RobotsTxtController;
+use Sdsmith1981\RobotsTxt\RobotsTxtProvider;
 
 class RobotsTxtTest extends TestCase {
 

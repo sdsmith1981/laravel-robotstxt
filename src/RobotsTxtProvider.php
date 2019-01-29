@@ -1,5 +1,5 @@
 <?php
-namespace Gverschuur\RobotsTxt;
+namespace Sdsmith1981\RobotsTxt;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -22,7 +22,7 @@ class RobotsTxtProvider extends ServiceProvider {
      */
     public function register() {
         include __DIR__ . '/routes.php';
-        $this->app->make('Gverschuur\RobotsTxt\Controllers\RobotsTxtController');
+        $this->app->make('Sdsmith1981\RobotsTxt\Controllers\RobotsTxtController');
 
         $this->mergeConfigFrom(__DIR__.'/../config/robots-txt.php', 'robots-txt');
     }

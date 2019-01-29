@@ -1,2 +1,2 @@
 <?php
-Route::get('/robots.txt', 'Gverschuur\RobotsTxt\Controllers\RobotsTxtController@index')->name('robots.txt');
+Route::get('/robots.txt', 'Sdsmith1981\RobotsTxt\Controllers\RobotsTxtController@index')->name('robots.txt');

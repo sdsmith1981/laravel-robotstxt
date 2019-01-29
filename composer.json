@@ -13,7 +13,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Gverschuur\\RobotsTxt\\": "src/"
+            "Sdsmith1981\\RobotsTxt\\": "src/"
         }
     },
     "license": "MIT"

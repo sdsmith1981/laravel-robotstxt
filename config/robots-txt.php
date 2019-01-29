@@ -4,7 +4,8 @@ return [
         'production' => [
             '*' => [
                 '', // production env always allows all
-            ]
+            ],
+            'sitemap' => false
         ]
     ]
 ];

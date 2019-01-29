@@ -5,7 +5,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [1.1.0] - 2017-01-16
 ### Changed
-- Changed Github/vendor username from gverschuur to verschuur. (Namespace in code is still the same for now. Ugly, I know, sue me).
+- Changed Github/vendor username from Sdsmith1981 to verschuur. (Namespace in code is still the same for now. Ugly, I know, sue me).
 
 ## [1.0.0] - 2016-10-04
 ### Added

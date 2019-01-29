@@ -1,5 +1,5 @@
 <?php
-namespace Gverschuur\RobotsTxt\Controllers;
+namespace Sdsmith1981\RobotsTxt\Controllers;
 
 use Illuminate\Routing\Controller;
 
@@ -19,7 +19,7 @@ class RobotsTxtController extends Controller
      * Custom paths can be set by publishing and editing the config file
      * @return Illuminate\Http\Response HTTP status 200 with a text/plain content type robots.txt output
      */
-    public function index() {
+     public function index() {
         /**
          * Note that the config is originally loaded from this package's config file, but a config file can be published to the Laravel config dir.
          * If so, due to the nature of the config setup and Larvel's config merge, the original config gets completely overwritten.
@@ -33,22 +33,34 @@ class RobotsTxtController extends Controller
             $robots = $this->defaultRobot();
         } else {
             // for each user agent, get the user agent name and the paths for the agent, appending them to the result string
+
+            $sitemap = array_get($envs[$env], 'sitemap', false);
             $agents = $envs[$env];
+            unset($agents['sitemap']);
             foreach($agents as $name => $paths) {
                 $robot = 'User-agent: ' . $name . PHP_EOL;
 
-                foreach ($paths as $path) {
+
+
+                foreach (array_except($paths, ['sitemap']) as $path) {
                     $robot .= 'Disallow: ' . $path . PHP_EOL;
                 }
 
+
+
                 // append this user agent and paths to the final output
                 $robots .= $robot . PHP_EOL;
+            }
+
+            if($sitemap){
+                $robots .= 'Sitemap: '. ($sitemap) . PHP_EOL;
             }
         }
 
         // output the entire robots.txt
         return \Response::make($robots, 200, array('content-type' => 'text/plain'));
     }
+
 
     /**
      * Default 'Disallow /' for every robot
